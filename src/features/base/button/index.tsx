@@ -6,7 +6,7 @@ export function Button(props: ButtonProps) {
 
   return (
     <button
-      className={twMerge("rounded-md p-3 bg-slate-200", className)}
+      className={twMerge("rounded-md p-3 bg-slate-200 w-full", className)}
       {...rest}
     >
       <span>{children}</span>
