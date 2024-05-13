@@ -1,6 +1,6 @@
 import { EyeCloseIcon, EyeOpenIcon } from "assets";
 import { Card, Input, Button } from "features/base";
-import { SetStateAction, Dispatch, useState } from "react";
+import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 
 export function LoginForm() {
@@ -11,8 +11,8 @@ export function LoginForm() {
         navigate("/home");
     };
 
-    const showPasswordHandler = (callBack: Dispatch<SetStateAction<boolean>>) => {
-        callBack(prev => !prev);
+    const showPasswordHandler = () => {
+        setShowPassword(prev => !prev)
     }
 
     return (
@@ -23,7 +23,7 @@ export function LoginForm() {
                label="Password"
                type={showPassword ? "text" : "password"}
                rightNode={showPassword ? <EyeCloseIcon/> : <EyeOpenIcon/>}
-               rightNodeClick={() => showPasswordHandler(setShowPassword)}
+               rightNodeClick={showPasswordHandler}
             />
             <Button onClick={loginHandler} className="bg-green-500">
                 Login
