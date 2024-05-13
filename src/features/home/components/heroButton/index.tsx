@@ -11,7 +11,7 @@ export function HeroButton() {
   };
 
   return (
-    <div className="mt-20 my-20 p-10 space-x-24 ">
+    <div className="mt-20 my-20 p-10 space-x-24 flex">
       <Button onClick={registerHandler} className="bg-green-500">
         Create Account
       </Button>
