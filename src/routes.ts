@@ -1,5 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
-import { Home, Error404, RegisterPage } from "pages";
+import { Home, Error404, RegisterPage, LoginPage } from "pages";
 import { MainLayout } from "layouts/default-layouts";
 
 export const routes = createBrowserRouter([
@@ -20,4 +20,8 @@ export const routes = createBrowserRouter([
     path: "*",
     Component: Error404,
   },
+  {
+    path: "/login",
+    Component: LoginPage,
+  }
 ]);
