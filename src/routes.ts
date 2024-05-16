@@ -1,19 +1,20 @@
 import { createBrowserRouter } from "react-router-dom";
 import { Home, Error404, RegisterPage, LoginPage } from "pages";
 import { MainLayout } from "layouts/default-layouts";
+import { homeUrl, registerUrl, loginUrl } from "config";
 
 export const routes = createBrowserRouter([
   {
     Component: MainLayout,
     children: [
       {
-        path: "/",
+        path: homeUrl,
         Component: Home,
       },
     ],
   },
   {
-    path: "/register",
+    path: registerUrl,
     Component: RegisterPage,
   },
   {
@@ -21,7 +22,7 @@ export const routes = createBrowserRouter([
     Component: Error404,
   },
   {
-    path: "/login",
+    path: loginUrl,
     Component: LoginPage,
-  }
+  },
 ]);
