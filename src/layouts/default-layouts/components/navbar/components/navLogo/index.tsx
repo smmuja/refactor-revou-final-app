@@ -6,7 +6,7 @@ export function NavLogo() {
   return (
     <>
       <Link to={homeUrl}>
-        <img src={logo} alt="" />
+        <img src={logo} alt="Logo" />
       </Link>
     </>
   );

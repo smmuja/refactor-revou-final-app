@@ -30,7 +30,6 @@ export function LoginForm() {
         Login
       </Button>
       <p className="text-center text-xs">
-        {" "}
         Not registered? Click <Link to={registerUrl}>Register</Link>
       </p>
     </Card>
