@@ -1,5 +1,12 @@
 import { createBrowserRouter } from "react-router-dom";
-import { Home, Error404, RegisterPage, LoginPage, ProfilePage } from "pages";
+import {
+  Home,
+  Error404,
+  RegisterPage,
+  LoginPage,
+  ProfilePage,
+  ProfileEditPage,
+} from "pages";
 import { MainLayout } from "layouts/default-layouts";
 // import { profileUrl } from "config";
 
@@ -14,6 +21,10 @@ export const routes = createBrowserRouter([
       {
         path: "/profile",
         Component: ProfilePage,
+      },
+      {
+        path: "/profile/edit",
+        Component: ProfileEditPage,
       },
     ],
   },
