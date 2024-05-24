@@ -8,7 +8,13 @@ import {
   ProfileEditPage,
 } from "pages";
 import { MainLayout } from "layouts/default-layouts";
-import { homeUrl, registerUrl, loginUrl, profileUrl } from "config";
+import {
+  homeUrl,
+  registerUrl,
+  loginUrl,
+  profileUrl,
+  profileEditUrl,
+} from "config";
 
 export const routes = createBrowserRouter([
   {
@@ -23,7 +29,7 @@ export const routes = createBrowserRouter([
         Component: ProfilePage,
       },
       {
-        path: "/profile/edit",
+        path: profileEditUrl,
         Component: ProfileEditPage,
       },
     ],
