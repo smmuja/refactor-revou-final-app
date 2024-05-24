@@ -6,6 +6,7 @@ import {
   LoginPage,
   ProfilePage,
   ProfileEditPage,
+  ProductsPage,
 } from "pages";
 import { MainLayout } from "layouts/default-layouts";
 import {
@@ -14,6 +15,7 @@ import {
   loginUrl,
   profileUrl,
   profileEditUrl,
+  productsUrl,
 } from "config";
 
 export const routes = createBrowserRouter([
@@ -31,6 +33,10 @@ export const routes = createBrowserRouter([
       {
         path: profileEditUrl,
         Component: ProfileEditPage,
+      },
+      {
+        path: productsUrl,
+        Component: ProductsPage,
       },
     ],
   },
