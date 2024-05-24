@@ -1,8 +1,11 @@
-import { ProfileEditButton } from "../profileEditButton";
-import { ProfileEditData } from "../profileEditData";
-import { ProfileEditImage } from "../profileEditImage";
-import { ProfileEditHead } from "../profileEditHead";
 import { Card } from "features/base";
+
+import {
+  ProfileEditHead,
+  ProfileEditImage,
+  ProfileEditData,
+  ProfileEditButton,
+} from "features/profileEdit";
 
 export function ProfileEditWrapper() {
   return (
