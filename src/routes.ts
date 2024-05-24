@@ -8,18 +8,18 @@ import {
   ProfileEditPage,
 } from "pages";
 import { MainLayout } from "layouts/default-layouts";
-// import { profileUrl } from "config";
+import { homeUrl, registerUrl, loginUrl, profitleUrl } from "config";
 
 export const routes = createBrowserRouter([
   {
     Component: MainLayout,
     children: [
       {
-        path: "/",
+        path: homeUrl,
         Component: Home,
       },
       {
-        path: "/profile",
+        path: {profitleUrl},
         Component: ProfilePage,
       },
       {
@@ -29,7 +29,7 @@ export const routes = createBrowserRouter([
     ],
   },
   {
-    path: "/register",
+    path: registerUrl,
     Component: RegisterPage,
   },
   {
@@ -37,7 +37,7 @@ export const routes = createBrowserRouter([
     Component: Error404,
   },
   {
-    path: "/login",
+    path: loginUrl,
     Component: LoginPage,
   },
 ]);
