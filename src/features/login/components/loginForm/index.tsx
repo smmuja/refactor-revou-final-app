@@ -17,7 +17,7 @@ export function LoginForm() {
   };
 
   return (
-    <Card className="space-y-2 shadow shadow-lg p-5 rouded-lg">
+    <Card className="space-y-2 shadow-lg p-5 rouded-lg">
       <p className="text-center text-xl mb-2">Login Form</p>
       <Input label="E-mail" />
       <Input
