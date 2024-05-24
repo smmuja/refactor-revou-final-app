@@ -1,13 +1,14 @@
 import { Button } from "features/base";
 import { useNavigate } from "react-router-dom";
+import { loginUrl, profileUrl, registerUrl } from "config";
 
 export function HeroButton() {
   const navigate = useNavigate();
   const loginHandler = () => {
-    navigate("/login");
+    navigate(loginUrl);
   };
   const registerHandler = () => {
-    navigate("/register");
+    navigate(registerUrl);
   };
 
   return (
