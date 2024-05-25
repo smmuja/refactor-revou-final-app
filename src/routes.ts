@@ -1,7 +1,20 @@
 import { createBrowserRouter } from "react-router-dom";
-import { Home, Error404, RegisterPage, LoginPage, ProfilePage } from "pages";
+import {
+  Home,
+  Error404,
+  RegisterPage,
+  LoginPage,
+  ProfilePage,
+  ProfileEditPage,
+} from "pages";
 import { MainLayout } from "layouts/default-layouts";
-import { homeUrl, registerUrl, loginUrl, profitleUrl } from "config";
+import {
+  homeUrl,
+  registerUrl,
+  loginUrl,
+  profileUrl,
+  profileEditUrl,
+} from "config";
 
 export const routes = createBrowserRouter([
   {
@@ -12,8 +25,12 @@ export const routes = createBrowserRouter([
         Component: Home,
       },
       {
-        path: {profitleUrl},
+        path: profileUrl,
         Component: ProfilePage,
+      },
+      {
+        path: profileEditUrl,
+        Component: ProfileEditPage,
       },
     ],
   },

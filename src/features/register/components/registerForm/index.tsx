@@ -2,7 +2,7 @@ import { Dispatch, SetStateAction, useState } from "react";
 import { Card, Input, Button } from "features/base";
 import { useNavigate, Link } from "react-router-dom";
 import { EyeCloseIcon, EyeOpenIcon } from "assets";
-import { businessUrl, loginUrl } from "config";
+import { businessesUrl, loginUrl } from "config";
 
 export function RegisterForm() {
   const [showPassword, setShowPassword] = useState(false);
@@ -10,7 +10,7 @@ export function RegisterForm() {
 
   const navigate = useNavigate();
   const registerHandler = () => {
-    navigate(businessUrl);
+    navigate(businessesUrl);
   };
 
   const showPasswordHandler = (callBack: Dispatch<SetStateAction<boolean>>) => {
@@ -18,7 +18,7 @@ export function RegisterForm() {
   };
 
   return (
-    <Card className="space-y-2 shadow shadow-lg p-5 rounded-lg">
+    <Card className="space-y-2 shadow-lg p-5 rounded-lg">
       <p className="text-center text-xl mb-2">Register Form</p>
       <Input label="E-mail" />
 
