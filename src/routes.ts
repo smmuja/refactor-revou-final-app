@@ -18,9 +18,11 @@ import {
   productsUrl,
   productsDetailUrl,
   productsAddUrl,
+  productsEditUrl,
 } from "config";
 import { ProductDetailPage } from "pages/productDetail";
 import { ProductAddPage } from "pages/productAdd";
+import { ProductEditPage } from "pages/productEdit";
 
 export const routes = createBrowserRouter([
   {
@@ -49,6 +51,10 @@ export const routes = createBrowserRouter([
       {
         path: productsAddUrl,
         Component: ProductAddPage,
+      },
+      {
+        path: productsEditUrl,
+        Component: ProductEditPage,
       },
     ],
   },
