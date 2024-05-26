@@ -16,7 +16,9 @@ import {
   profileUrl,
   profileEditUrl,
   productsUrl,
+  productsDetailUrl,
 } from "config";
+import { ProductDetailPage } from "pages/productDetail";
 
 export const routes = createBrowserRouter([
   {
@@ -37,6 +39,10 @@ export const routes = createBrowserRouter([
       {
         path: productsUrl,
         Component: ProductsPage,
+      },
+      {
+        path: productsDetailUrl,
+        Component: ProductDetailPage,
       },
     ],
   },

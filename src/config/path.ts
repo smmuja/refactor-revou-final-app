@@ -10,3 +10,5 @@ export const businessesUrl = "/businesses";
 
 export const productsUrl = "/products";
 export const productsDetailUrl = "/products/:id";
+export const productsEditUrl = "/products/:id/edit";
+export const productsAddUrl = "/products/add";
