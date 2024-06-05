@@ -8,7 +8,7 @@ export function ProfileEditData() {
           <tr className="py-3">
             <th className="text-left">Username</th>
             <td>
-              <Input name="username" defaultValue="amia"></Input>
+              <Input name="username" placeholder="Username"></Input>
             </td>
           </tr>
           <tr className="py-3">
@@ -17,8 +17,7 @@ export function ProfileEditData() {
               <Input
                 type="text"
                 name="email"
-                placeholder="Email"
-                defaultValue="email@email.com"
+                placeholder="Email@email.com"
               ></Input>
             </td>
           </tr>
@@ -29,7 +28,7 @@ export function ProfileEditData() {
               <Input
                 type="text"
                 name="phone_number"
-                defaultValue="088888"
+                placeholder="088888"
               ></Input>
             </td>
           </tr>
@@ -39,7 +38,7 @@ export function ProfileEditData() {
               <Input
                 type="text"
                 name="occupation"
-                defaultValue="Occupation"
+                placeholder="Occupation"
               ></Input>
             </td>
           </tr>
