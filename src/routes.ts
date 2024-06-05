@@ -13,6 +13,7 @@ import {
   ProductAddPage,
   ProductEditPage,
   BusinessAddPage,
+  BusinessEditPage,
 } from "pages";
 import { MainLayout } from "layouts/default-layouts";
 import {
@@ -28,6 +29,7 @@ import {
   businessesUrl,
   businessDetailUrl,
   businessAddUrl,
+  businessEditUrl,
 } from "config";
 
 export const routes = createBrowserRouter([
@@ -57,6 +59,10 @@ export const routes = createBrowserRouter([
       {
         path: businessAddUrl,
         Component: BusinessAddPage,
+      },
+      {
+        path: businessEditUrl,
+        Component: BusinessEditPage,
       },
       {
         path: productsUrl,
