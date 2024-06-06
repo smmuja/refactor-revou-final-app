@@ -1,8 +1,7 @@
-import { Card } from "features/base";
+import { Card, ProductImage } from "features/base";
 import {
   ProductsHead,
   ProductsData,
-  ProductsImage,
   ProductsDetailButton,
 } from "features/products";
 
@@ -11,13 +10,13 @@ export function ProductsWrapper() {
     <>
       <Card>
         <ProductsHead />
-        <ProductsImage />
+        <ProductImage />
         <ProductsData />
         <ProductsDetailButton />
       </Card>
       <Card>
         <ProductsHead />
-        <ProductsImage />
+        <ProductImage />
         <ProductsData />
         <ProductsDetailButton />
       </Card>
