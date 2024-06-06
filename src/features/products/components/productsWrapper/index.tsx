@@ -1,24 +1,22 @@
-import { Card } from "features/base";
+import { Card, ProductImage } from "features/base";
 import {
   ProductsHead,
   ProductsData,
-  ProductsImage,
   ProductsDetailButton,
 } from "features/products";
-import {} from "../productsImage";
 
 export function ProductsWrapper() {
   return (
     <>
       <Card>
         <ProductsHead />
-        <ProductsImage />
+        <ProductImage />
         <ProductsData />
         <ProductsDetailButton />
       </Card>
       <Card>
         <ProductsHead />
-        <ProductsImage />
+        <ProductImage />
         <ProductsData />
         <ProductsDetailButton />
       </Card>
