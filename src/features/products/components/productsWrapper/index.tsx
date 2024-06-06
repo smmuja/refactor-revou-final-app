@@ -5,7 +5,6 @@ import {
   ProductsImage,
   ProductsDetailButton,
 } from "features/products";
-import {} from "../productsImage";
 
 export function ProductsWrapper() {
   return (
