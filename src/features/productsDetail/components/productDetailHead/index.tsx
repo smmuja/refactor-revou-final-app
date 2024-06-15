@@ -1,4 +1,4 @@
-import { ProductDetailEditButton } from "../productDetailEditButton";
+import { ProductDetailEditButton } from "features/productsDetail";
 
 export function ProductDetailHead() {
   return (
