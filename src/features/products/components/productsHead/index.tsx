@@ -2,7 +2,7 @@ import businessImg from "assets/business.png";
 
 export function ProductsHead() {
   return (
-    <div className="flex gap-5 items-center">
+    <div className="flex gap-5 items-center mb-5">
       <img
         src={businessImg}
         alt="business picture"

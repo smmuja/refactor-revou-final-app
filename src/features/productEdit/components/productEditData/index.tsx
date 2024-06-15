@@ -8,11 +8,7 @@ export function ProductEditData() {
           <tr className="py-3">
             <th className="text-left">Product Name</th>
             <td>
-              <Input
-                name="product-name"
-                placeholder=""
-                defaultValue="Product name"
-              ></Input>
+              <Input name="product-name" placeholder="Product name"></Input>
             </td>
           </tr>
           <tr className="py-3">
@@ -22,7 +18,6 @@ export function ProductEditData() {
                 type="number"
                 name="product-price"
                 placeholder="100000"
-                defaultValue=""
               ></Input>
             </td>
           </tr>
@@ -33,8 +28,7 @@ export function ProductEditData() {
               <Input
                 type="text"
                 name="product-description"
-                placeholder=""
-                defaultValue=""
+                placeholder="Product description"
               ></Input>
             </td>
           </tr>

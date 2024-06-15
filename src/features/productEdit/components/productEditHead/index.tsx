@@ -1,3 +1,3 @@
 export function ProductEditHead() {
-  return <h2 className="font-bold mb-7 text-lg">Edit Product</h2>;
+  return <h2 className="font-bold mb-5 text-lg">Edit Product</h2>;
 }
