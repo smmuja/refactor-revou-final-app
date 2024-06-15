@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 
-export function footerMenu() {
+export function FooterMenu() {
     return (
         <div>
             <Link to="/about">
