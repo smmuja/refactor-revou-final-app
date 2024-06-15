@@ -2,7 +2,7 @@ import { Link } from "react-router-dom"
 
 export function FooterMenu() {
     return (
-        <div>
+        <div className="py-5 px-10 text-center space-x-4">
             <Link to="/about">
                 <span>About</span>
             </Link>

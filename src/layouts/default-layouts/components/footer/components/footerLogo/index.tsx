@@ -4,10 +4,10 @@ import { homeUrl } from "config";
 
 export function FooterLogo() {
     return (
-        <>
-            <Link to={homeUrl}>
+       <div className="py-5 px-10 border-b-4 border-black">
+             <Link to={homeUrl}>
                 <img src={logo} alt="Logo" />
             </Link>
-        </>
+        </div>
     )
 } 
