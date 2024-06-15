@@ -13,3 +13,4 @@ export * from "./productAdd";
 export * from "./businesses";
 export * from "./businessDetail";
 export * from "./businessAdd";
+export * from "./businessEdit";
