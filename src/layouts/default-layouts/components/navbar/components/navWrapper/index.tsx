@@ -9,7 +9,7 @@ export function NavWrapper() {
   const auth = true;
 
   return (
-    <nav className="p-3 bg-green-500">
+    <nav className="p-3 bg-green-500 sticky top-0">
       <div className="flex items-center justify-between">
         <NavLogo />
         <div>
