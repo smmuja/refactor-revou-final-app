@@ -3,13 +3,13 @@ import {
   UserBusiness,
   UserData,
   UserImage,
-  UserInformation,
+  UserProfileHeader,
 } from "features/profile";
 
 export function ProfileWrapper() {
   return (
     <Card className="max-w-screen-sm">
-      <UserInformation />
+      <UserProfileHeader />
       <UserImage />
       <UserData />
       <UserBusiness />

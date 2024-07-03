@@ -1,38 +1,39 @@
+import { Table, TableRow } from "features/base";
+import { profileResponse } from "features/profile/api";
+import { useQuery } from "react-query";
+
 export function UserData() {
+  const { data, isLoading, isError } = useQuery({
+    queryKey: [""],
+    queryFn: profileResponse,
+  });
+
+  if (isLoading) {
+    return <span>Loading ...</span>;
+  }
+  if (isError) {
+    return <span>Error: Unknown error </span>;
+  }
+
   return (
     <>
-      <table className="w-full">
-        <tr className="py-3">
-          <th className="text-left">Username</th>
-          <td>Amia</td>
-        </tr>
-        <tr className="py-3">
-          <th className="text-left">Email</th>
-          <td>Add Email</td>
-        </tr>
-        <tr className="py-3">
-          <th className="text-left">Business Amount</th>
-          <td>00</td>
-        </tr>
-        <tr className="py-3">
-          <th className="text-left">Product Amount</th>
-          <td>00</td>
-        </tr>
-        <tr className="py-3">
-          <th className="text-left">Phone Number</th>
-          <td>0888888</td>
-        </tr>
-        <tr className="py-3">
-          <th className="text-left">Occupation</th>
-          <td>Occupation</td>
-        </tr>
-      </table>
-      <p className="m-3">
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi adipisci
-        hic porro consequuntur labore nisi, inventore et atque recusandae, fuga
-        laborum quos harum dolorum sint asperiores nemo quae delectus
-        distinctio?
-      </p>
+      <Table>
+        <TableRow label="Username " data={data?.username}></TableRow>
+        <TableRow label="Email " data={data?.email}></TableRow>
+        <TableRow
+          label="Business Amount "
+          data={data?.business_amount}
+        ></TableRow>
+        <TableRow
+          label="Product Amount "
+          data={data?.product_amount}
+        ></TableRow>
+        <TableRow label="Phone number " data={data?.phone_number}></TableRow>
+        <TableRow label="Occupation " data={data?.occupation}></TableRow>
+        <TableRow label="Description "></TableRow>
+      </Table>
+
+      <p className="mt-2 ml-3">{data?.description}</p>
     </>
   );
 }
