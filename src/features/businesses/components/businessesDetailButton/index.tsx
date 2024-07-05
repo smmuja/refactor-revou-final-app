@@ -7,7 +7,10 @@ export function BusinessesDetailButton() {
   const businessDetailNavigate = () => navigate(businessDetailUrl);
 
   return (
-    <Button onClick={businessDetailNavigate} className="mt-3 bg-green-500">
+    <Button
+      onClick={businessDetailNavigate}
+      className="mt-3 bg-green-500 rounded-sm py-2"
+    >
       Business Details
     </Button>
   );
