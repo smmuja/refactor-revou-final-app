@@ -7,7 +7,7 @@ export function Button(props: ButtonProps) {
   return (
     <button
       className={twMerge(
-        "rounded-md p-3 bg-slate-200 w-full hover:bg-opacity-15",
+        "rounded-md p-3 bg-slate-200 w-full hover:bg-opacity-85",
         className
       )}
       {...rest}
