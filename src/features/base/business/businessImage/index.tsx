@@ -1,5 +1,8 @@
-import businessImg from "assets/business.png";
+// import businessImg from "assets/business.png";
+import { BusinessImageProps } from "./type";
 
-export function BusinessImage() {
-  return <img src={businessImg} alt="Business image" />;
+export function BusinessImage(props: BusinessImageProps) {
+  const { src, ...rest } = props;
+
+  return <img {...rest} src={src} alt="Business image" />;
 }
