@@ -1,25 +1,11 @@
-// import userDummy from "assets/userDummy.png";
-import { profileResponse } from "features/profile";
-import { useQuery } from "react-query";
+import { UserImageProps } from "./type";
 
-export function UserImage() {
-  const { data, isLoading, isError, error } = useQuery({
-    queryKey: [""],
-    queryFn: profileResponse,
-  });
-
-  if (isLoading) {
-    return <span>Loading ...</span>;
-  }
-  if (isError) {
-    return error;
-  }
-
-  // const userImg = data?.profile_url.length > 0 ? data?.profile_url : userDummy;
+export function UserImage(props: UserImageProps) {
+  const { src, ...rest } = props;
 
   return (
     <>
-      <img src={data?.profile_url} alt="User Profile" />
+      <img {...rest} src={src} alt="User Profile" />
     </>
   );
 }
