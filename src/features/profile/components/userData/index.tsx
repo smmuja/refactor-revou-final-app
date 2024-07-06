@@ -1,6 +1,9 @@
 import { Table, TableRow } from "features/base";
+import { UserImage } from "features/profile";
 import { profileResponse } from "features/profile/api";
 import { useQuery } from "react-query";
+
+// import userDummy from "assets/userDummy.png";
 
 export function UserData() {
   const { data, isLoading, isError } = useQuery({
@@ -15,8 +18,11 @@ export function UserData() {
     return <span>Error: Unknown error </span>;
   }
 
+  // const userImg = data?.profile_url.length > 0 ? data?.profile_url : userDummy;
+
   return (
     <>
+      <UserImage src={data?.profile_url} />
       <Table>
         <TableRow label="Username " data={data?.username}></TableRow>
         <TableRow label="Email " data={data?.email}></TableRow>
