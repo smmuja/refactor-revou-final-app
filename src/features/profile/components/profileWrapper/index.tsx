@@ -1,16 +1,11 @@
 import { Card } from "features/base";
-import {
-  UserBusiness,
-  UserData,
-  UserImage,
-  UserInformation,
-} from "features/profile";
+import { UserBusiness, UserData, UserProfileHeader } from "features/profile";
 
 export function ProfileWrapper() {
   return (
     <Card className="max-w-screen-sm">
-      <UserInformation />
-      <UserImage />
+      <UserProfileHeader />
+      {/* <UserImage /> */}
       <UserData />
       <UserBusiness />
     </Card>

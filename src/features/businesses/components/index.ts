@@ -1,5 +1,4 @@
 export * from "./businessesWrapper";
-export * from "./businessesHead";
-export * from "./businessesImage";
+export * from "./businessesHeader";
 export * from "./businessesData";
 export * from "./businessesDetailButton";
