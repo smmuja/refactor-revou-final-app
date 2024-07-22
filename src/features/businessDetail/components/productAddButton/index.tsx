@@ -6,8 +6,8 @@ export function ProductAddButton() {
   const navigate = useNavigate();
   const handleProductAdd = () => navigate(productsAddUrl);
   return (
-    <Button onClick={handleProductAdd} className="bg-green-500">
-      Add Product
+    <Button onClick={handleProductAdd} className="bg-sky-500 my-5">
+      Add New Product
     </Button>
   );
 }
