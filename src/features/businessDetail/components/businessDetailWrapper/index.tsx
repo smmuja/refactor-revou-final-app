@@ -1,10 +1,10 @@
 import { Card } from "features/base";
 import {
-  BusinessAddButton,
   BusinessDetailData,
   BusinessDetailHead,
   BusinessDetailImage,
   BusinessDetailProductInformation,
+  ProductAddButton,
 } from "features/businessDetail";
 
 export function BusinessDetailWrapper() {
@@ -13,7 +13,7 @@ export function BusinessDetailWrapper() {
       <BusinessDetailHead />
       <BusinessDetailImage />
       <BusinessDetailData />
-      <BusinessAddButton />
+      <ProductAddButton />
       <BusinessDetailProductInformation />
     </Card>
   );
