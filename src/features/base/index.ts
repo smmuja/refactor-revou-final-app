@@ -7,3 +7,4 @@ export * from "./business";
 export * from "./product";
 export * from "./badge";
 export * from "./dataPair";
+export * from "./notFoundComponent";
