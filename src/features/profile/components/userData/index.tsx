@@ -1,15 +1,9 @@
-import { Table, TableRow } from "features/base";
-import { UserImage } from "features/profile";
-import { profileResponse } from "features/profile/api";
-import { useQuery } from "react-query";
-
-// import userDummy from "assets/userDummy.png";
+import { DataPair } from "features/base";
+import { UserImage } from "features/profile/components";
+import { useGetUser } from "features/profile/hooks";
 
 export function UserData() {
-  const { data, isLoading, isError } = useQuery({
-    queryKey: [""],
-    queryFn: profileResponse,
-  });
+  const { User, isLoading, isError } = useGetUser();
 
   if (isLoading) {
     return <span>Loading ...</span>;
@@ -18,28 +12,24 @@ export function UserData() {
     return <span>Error: Unknown error </span>;
   }
 
-  // const userImg = data?.profile_url.length > 0 ? data?.profile_url : userDummy;
+  console.log(User);
 
   return (
     <>
-      <UserImage src={data?.profile_url} />
-      <Table>
-        <TableRow label="Username " data={data?.username}></TableRow>
-        <TableRow label="Email " data={data?.email}></TableRow>
-        <TableRow
-          label="Business Amount "
-          data={data?.business_amount}
-        ></TableRow>
-        <TableRow
-          label="Product Amount "
-          data={data?.product_amount}
-        ></TableRow>
-        <TableRow label="Phone number " data={data?.phone_number}></TableRow>
-        <TableRow label="Occupation " data={data?.occupation}></TableRow>
-        <TableRow label="Description "></TableRow>
-      </Table>
+      <UserImage src={User?.profileImgUrl} />
+      <p>
+        Member since <span className="text-gray-500">{User?.created_at}</span>
+      </p>
+      <DataPair label={"Username"} data={User?.username} />
+      <DataPair label={"Email"} data={User?.email} />
+      <DataPair label={"Business Total"} data={User?.business_total} />
+      <DataPair label={"Product Total"} data={User?.product_total} />
+      <DataPair label={"Phone Number"} data={User?.phone_number} />
+      <DataPair label={"Occupation"} data={User?.occupation} />
+      <p className="font-medium">Description</p>
+      <p className="mt-2 ml-3">{User?.description}</p>
 
-      <p className="mt-2 ml-3">{data?.description}</p>
+      <p className="mt-2 ml-3">{User?.description}</p>
     </>
   );
 }
