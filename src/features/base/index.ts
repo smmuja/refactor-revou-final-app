@@ -6,3 +6,4 @@ export * from "./badge";
 export * from "./business";
 export * from "./product";
 export * from "./dataPair";
+export * from "./notFoundComponent";
