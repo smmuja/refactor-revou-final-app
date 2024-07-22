@@ -1,10 +1,12 @@
-import { businessDetailUrl } from "config";
+// import { businessDetailUrl } from "config";
 import { Button } from "features/base";
 import { useNavigate } from "react-router-dom";
+import { businessDetailButtonProps } from "./type";
 
-export function BusinessesDetailButton() {
+export function BusinessesDetailButton(props: businessDetailButtonProps) {
+  const { id } = props;
   const navigate = useNavigate();
-  const businessDetailNavigate = () => navigate(businessDetailUrl);
+  const businessDetailNavigate = () => navigate(`/businesses-detail/${id}`);
 
   return (
     <Button
