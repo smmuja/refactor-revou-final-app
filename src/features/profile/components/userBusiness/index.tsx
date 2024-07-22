@@ -2,7 +2,7 @@ import { Button, Card } from "features/base";
 import { useNavigate } from "react-router-dom";
 import { businessAddUrl } from "config";
 import { useGetUser } from "features/profile/hooks/useGetUser";
-import { NotFoundComponent } from "features/base";
+import { NotFoundComponent } from "features/base/notFoundComponent";
 
 export function UserBusiness() {
   const navigate = useNavigate();
