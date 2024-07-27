@@ -1,25 +1,12 @@
 import { Card } from "features/base";
-import {
-  BusinessesData,
-  BusinessesDetailButton,
-  BusinessesHead,
-  BusinessesImage,
-} from "features/businesses";
+import { BusinessesData, BusinessesHeader } from "features/businesses";
 
 export function BusinessesWrapper() {
   return (
     <>
-      <Card>
-        <BusinessesHead />
-        <BusinessesImage />
+      <Card className="border-none">
+        <BusinessesHeader />
         <BusinessesData />
-        <BusinessesDetailButton />
-      </Card>
-      <Card>
-        <BusinessesHead />
-        <BusinessesImage />
-        <BusinessesData />
-        <BusinessesDetailButton />
       </Card>
     </>
   );
