@@ -1,14 +1,13 @@
-import businessImg from "assets/business.png";
+import { Card } from "features/base";
 
 export function ProductsHead() {
   return (
-    <div className="flex gap-5 items-center mb-5">
-      <img
-        src={businessImg}
-        alt="business picture"
-        className="size-10 rounded-full"
-      />
-      <p>Business Name</p>
-    </div>
+    <>
+      <>
+        <Card className="flex justify-between border-none pt-0">
+          <h3 className="font-bold">Product List</h3>
+        </Card>
+      </>
+    </>
   );
 }
