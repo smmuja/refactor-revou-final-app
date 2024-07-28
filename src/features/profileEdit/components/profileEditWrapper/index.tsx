@@ -4,7 +4,6 @@ import {
   ProfileEditHead,
   ProfileEditImage,
   ProfileEditData,
-  ProfileEditButton,
 } from "features/profileEdit";
 
 export function ProfileEditWrapper() {
@@ -13,7 +12,6 @@ export function ProfileEditWrapper() {
       <ProfileEditHead />
       <ProfileEditImage />
       <ProfileEditData />
-      <ProfileEditButton />
     </Card>
   );
 }
