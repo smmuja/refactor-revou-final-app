@@ -12,8 +12,6 @@ export function BusinessDetailData() {
     return <div>Error fetching data</div>;
   }
 
-  console.log(data);
-
   return (
     <>
       <div className="flex justify-between my-2">

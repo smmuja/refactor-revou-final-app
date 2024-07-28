@@ -1,10 +1,14 @@
-import { businessEditUrl } from "config";
+import { businessesUrl } from "config";
 import { Button } from "features/base";
+import { useGetBusinessDetail } from "features/businessDetail/hooks";
 import { useNavigate } from "react-router-dom";
 
 export function BusinessDetailEditButton() {
+  const { data } = useGetBusinessDetail();
+
   const navigate = useNavigate();
-  const handleBusinessEdit = () => navigate(businessEditUrl);
+  const handleBusinessEdit = () =>
+    navigate(`${businessesUrl}/${data.business_id}/edit`);
   return (
     <Button
       onClick={handleBusinessEdit}

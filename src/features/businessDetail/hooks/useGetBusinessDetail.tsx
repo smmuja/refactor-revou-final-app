@@ -2,6 +2,7 @@ import { useQuery } from "react-query";
 import businessImg from "assets/business.png";
 import { businessDetailResponse } from "../api";
 import { useParams } from "react-router-dom";
+import productImg from "assets/product.png";
 
 export function useGetBusinessDetail() {
   const { id } = useParams();
@@ -11,8 +12,8 @@ export function useGetBusinessDetail() {
     queryFn: () => businessDetailResponse(String(id)),
   });
 
-  const business = {
-    id: data?.id,
+  const businessInfo = {
+    business_id: data?.id,
     business_name: data?.business_name,
     business_types: data?.business_types,
     description: data?.description,
@@ -25,8 +26,22 @@ export function useGetBusinessDetail() {
     created_at: data?.create_at ? new Date(data?.create_at) : "",
   };
 
+  const currencyIDR = new Intl.NumberFormat("id-ID", {
+    style: "currency",
+    currency: "IDR",
+  });
+
+  const productInfo = data?.product.map((item) => ({
+    product_id: item.id,
+    product_name: item.product_name,
+    product_price: item.product_price && currencyIDR.format(item.product_price),
+    product_description: item.description,
+    product_img: item.profile_url ? item.profile_url : productImg,
+  }));
+
   return {
-    data: business,
+    data: businessInfo,
+    product: productInfo,
     isError,
     isLoading,
   };
