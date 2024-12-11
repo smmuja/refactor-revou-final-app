@@ -1,15 +1,22 @@
+import { useGetProductDetail } from "features/productsDetail/hooks";
+
 export function ProductDetailData() {
+  const { data, isLoading, isError } = useGetProductDetail();
+
+  if (isLoading) {
+    return <div>Loading ...</div>;
+  }
+  if (isError) {
+    return <div>Error fetching data</div>;
+  }
+
+  console.log(data);
   return (
     <>
-      <h3 className="font-semibold">Product Name</h3>
-      <p className="text-gray-400">Rp100.000</p>
+      <h3 className="font-semibold">{data.product_name}</h3>
+      <p className="text-gray-400">{data.product_price}</p>
       <p className="mt-3 font-medium">Description: </p>
-      <p className="ml-3">
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae nam
-        consectetur et repudiandae ad libero architecto neque iure, rerum
-        quaerat similique aspernatur laboriosam numquam reiciendis quae error?
-        A, placeat culpa!
-      </p>
+      <p className="ml-3">{data.product_description}</p>
     </>
   );
 }
