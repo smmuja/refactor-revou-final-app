@@ -1,5 +1,11 @@
-import userDummy from "assets/userDummy.png";
+import { UserImageProps } from "./type";
 
-export function UserImage() {
-  return <img src={userDummy} alt="Dummy User Profile" />;
+export function UserImage(props: UserImageProps) {
+  const { src, ...rest } = props;
+
+  return (
+    <>
+      <img {...rest} src={src} alt="User Profile" />
+    </>
+  );
 }

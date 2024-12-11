@@ -1,4 +1,4 @@
-export * from "./userInformation";
+export * from "./userProfileHeader";
 export * from "./profileWrapper";
 export * from "./userImage";
 export * from "./userData";
