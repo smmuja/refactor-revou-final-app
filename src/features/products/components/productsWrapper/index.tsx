@@ -1,24 +1,12 @@
-import { Card, ProductImage } from "features/base";
-import {
-  ProductsHead,
-  ProductsData,
-  ProductsDetailButton,
-} from "features/products";
+import { Card } from "features/base";
+import { ProductsData, ProductsHead } from "features/products";
 
 export function ProductsWrapper() {
   return (
     <>
-      <Card>
+      <Card className="border-none">
         <ProductsHead />
-        <ProductImage />
         <ProductsData />
-        <ProductsDetailButton />
-      </Card>
-      <Card>
-        <ProductsHead />
-        <ProductImage />
-        <ProductsData />
-        <ProductsDetailButton />
       </Card>
     </>
   );
