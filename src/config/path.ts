@@ -7,7 +7,7 @@ export const profileUrl = "/profile";
 export const profileEditUrl = "/profile/edit";
 
 export const businessesUrl = "/businesses";
-export const businessDetailUrl = "/businesses/:id";
+export const businessDetailUrl = "/businesses-detail/:id";
 export const businessEditUrl = "/businesses/:id/edit";
 export const businessAddUrl = "/businesses/add";
 
