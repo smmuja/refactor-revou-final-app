@@ -1,6 +1,5 @@
 import { Card } from "features/base";
 import {
-  BusinessEditButton,
   BusinessEditData,
   BusinessEditHead,
   BusinessEditImage,
@@ -12,7 +11,6 @@ export function BusinessEditWrapper() {
       <BusinessEditHead />
       <BusinessEditImage />
       <BusinessEditData />
-      <BusinessEditButton />
     </Card>
   );
 }
